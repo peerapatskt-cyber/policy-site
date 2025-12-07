@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TikTok Redirect</title>
+</head>
+<body>
+  <h1>TikTok Authorization Code</h1>
+  <p id="code">Waiting for code...</p>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get("code");
+    if (code) {
+        document.getElementById("code").textContent = code;
+    } else {
+        document.getElementById("code").textContent = "No code received.";
+    }
+  </script>
+</body>
+</html>
